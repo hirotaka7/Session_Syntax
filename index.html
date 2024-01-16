@@ -1,0 +1,2361 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>最低限知っていらば始められるpython基本構文</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/custom.css" />
+    <link rel="stylesheet" href="dist/style.css" />
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <div class="topLogo"><img src="dist/ACube.png" width="75px" /></div>
+        <!-- Reveal & font-awesome hidden→ data-visibility="hidden" -->
+        <section data-visibility="hidden">
+          <h2>
+            <a href="https://revealjs.com/" target="_blank">reveal.js doc</a>
+          </h2>
+          <h2>
+            <a href="https://fontawesome.com/search" target="_blank"
+              >font-awesom icon</a
+            >
+          </h2>
+          <hr />
+          <br />
+          <div class="wrapper3">
+            <div>
+              <i class="fa-solid fa-location-dot icon"></i>
+              <p>fa-solid fa-location-dot</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-user icon"></i>
+              <p>fa-solid fa-user</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-file icon"></i>
+              <p>fa-solid fa-file</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-bars icon"></i>
+              <p>fa-solid fa-bars</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-map icon"></i>
+              <p>fa-solid fa-map</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-map-location-dot icon"></i>
+              <p>fa-solid fa-map-location-dot</p>
+            </div>
+          </div>
+        </section>
+        <!-- タイトル　Google Colab -->
+        <section>
+          <section>
+            <p>edaJuke(江田塾)</p>
+            <h1>最低限知っていらば始められるpython基本構文</h1>
+            <hr />
+            <br />
+            <ul>
+              <li>構文 : Syntax</li>
+              <li>プログラミングにおける「構文」= プログラムの文法やルール</li>
+              <li>
+                プログラミング言語によって構文は異なるが基本・基礎は一緒！
+              </li>
+            </ul>
+            <p>by Occupier Advisory | Hirotaka Eda</p>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              Google Colaboratory
+            </p>
+            <h1>実際に書いてみよう！</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <img src="./dist/GoogleColabLogo.png" />
+                <h3>
+                  とっても丁寧な詳しい解説動画<i
+                    class="fa-solid fa-arrow-down icon"
+                    style="padding-left: 20px"
+                  ></i>
+                </h3>
+                <a href="https://youtu.be/wMXhZAINYhw" target="”_blank”"
+                  >たった1分でPythonのプログラミングを始める｜Google
+                  Colaboratoryの使い方</a
+                >
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    Google Driveから左上の<i
+                      class="fa-solid fa-plus"
+                      style="
+                        border: solid 2px;
+                        padding: 5px;
+                        border-radius: 10px;
+                      "
+                    >
+                      新規</i
+                    >
+                  </li>
+                  <li>その他 > Google Colaboratory を選択</li>
+                  <li>
+                    なければ
+                    <i
+                      class="fa-solid fa-plus"
+                      style="border: solid 2px; padding: 5px"
+                    >
+                      アプリを追加</i
+                    >
+                  </li>
+                </ul>
+                <img src="./dist/Colab1.png" height="250px" />
+                <h4>こんな画面が出たらOK!</h4>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              Google Colaboratory
+            </p>
+            <h1>初めてのコードを打ってみる！</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <img src="./dist/Colab2.png" height="350px" />
+              </div>
+              <div>
+                <ul>
+                  <li>左上の.ipynbノートブック名を変更してみよう！</li>
+                  <li>以下のコードを打って実行してみよう！</li>
+                  <li>実行するには</li>
+                  <ul>
+                    <li><i class="fa-solid fa-play"></i> をクリック</li>
+                    <li>Ctrl + Enter</li>
+                    <li>Shift + Enter (実行+下に新しいセルへ移動)</li>
+                  </ul>
+                </ul>
+                <pre><code class='python' data-trim data-noescape>
+									print("Hello World")
+								</code></pre>
+                <p>下にHello Worldと表示されれば成功！</p>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- 1.変数 -->
+        <section>
+          <section>
+            <p>edaJuke(江田塾) 最低限知っていらば始められるpython基本構文</p>
+            <h1>1. 変数</h1>
+            <hr />
+            <br />
+            <ul>
+              <li>変数 : Variable</li>
+              <li>変数はデータを入れることができる箱のようなもの</li>
+            </ul>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              1.変数
+            </p>
+            <h1>変数名のルール</h1>
+            <hr />
+            <br />
+            <ul>
+              <li>変数名は基本的に自由だがルールがあります</li>
+              <li>アルファベットと数字、_の組み合わせ</li>
+              <li>先頭に数字、_以外の記号は使用できない</li>
+              <li>大文字と小文字は区別される</li>
+              <li>予約語は使用できない</li>
+            </ul>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              1.変数
+            </p>
+            <h1>変数を宣言してみよう！</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									# fugaという変数に1を宣言する
+									fuga = 1
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# fugaという変数を呼び出す
+									print(fuga)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# fugaとそのまま打って実行してもよい
+									fuga
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# 計算してみる
+									fuga + 1
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# 計算結果を代入してみる
+									fuga = fuga + 1
+								</code></pre>
+              </div>
+              <div>
+                <h3>ポイント</h3>
+                <ul>
+                  <li>変数名にはルールがある</li>
+                  <li>変数は代入しないと値は変わらない</li>
+                  <li>print(変数名)で確認する癖をつけよう！</li>
+                </ul>
+                <p>
+                  もっと詳しく知りたい方はこちら<i
+                    class="fa-solid fa-arrow-down icon"
+                    style="padding-left: 20px"
+                  ></i>
+                </p>
+                <a
+                  href="https://kino-code.com/python_introductory-and-applied04/"
+                  target="”_blank”"
+                  >【Python入門・応用】04.変数</a
+                >
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- 2. データ型 -->
+        <section>
+          <section>
+            <p>edaJuke(江田塾) 最低限知っていらば始められるpython基本構文</p>
+            <h1>2. データ型</h1>
+            <hr />
+            <br />
+            <ul>
+              <li>データ型 : Data Type</li>
+              <li>
+                言語によっては変数へデータを入れる際にデータ型を指定しなければいけない言語もある
+              </li>
+              <li>
+                Pythonはデータ型を自動で認識してくれるので必要はないが制御する事は出来る
+              </li>
+            </ul>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              2.データ型
+            </p>
+            <h1>数値型</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <h2>int型</h2>
+                <p>整数</p>
+                <pre><code class='python' data-trim data-noescape>
+									num_1 = 123
+									num_2 = 456
+									num_3 = num_1 + num_2
+
+									print(num_3)
+									print(type(num_3))
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> 579
+									> class 'int'
+								</code></pre>
+              </div>
+              <div>
+                <h2>float型</h2>
+                <p>小数</p>
+                <pre><code class='python' data-trim data-noescape>
+									num_1 = 12.3
+									num_2 = 4.56
+									num_3 = num_1 + num_2
+	
+									print(num_3)
+									print(type(num_3))
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> 16.86
+									> class 'float'
+								</code></pre>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              2.データ型
+            </p>
+            <h1>文字列型・string型・str型</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <p>
+                  文字列はシングルクォーテーション('str'),
+                  またはダブルクオーテーション("str")で囲って宣言する
+                </p>
+                <pre><code class='python' data-trim data-noescape="">
+									str_a = 'Hello World'
+									str_b = "ハローワールド"
+
+									print(str_a, type(str_a))
+									print(str_b, type(str_b))
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape="">
+									> Hello World class 'str'
+									> ハローワールド class 'str'
+								</code></pre>
+              </div>
+              <div>
+                <p>"""～"""とすると改行も自由に挿入して宣言できる</p>
+                <pre><code class='python' data-trim data-noescape="">
+									str_c = """Hello World!
+									Hello World!
+									Hello World!
+									"""
+									
+									print(str_c, type(str_c))
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape="">
+									> Hello World!
+									> Hello World!
+									> Hello World!
+									> class 'str'
+								</code></pre>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              2.データ型
+            </p>
+            <h1>ブール型・boolean型・bool型</h1>
+            <p>True(真) or False(偽)</p>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <p>直接宣言する場合はTrue/False(先頭は大文字)</p>
+                <pre><code class='python' data-trim data-noescape>
+									bool_1 = True
+									bool_2 = False
+
+									print(bool_1, type(bool_1))
+									print(bool_2, type(bool_2))
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> True class 'bool'
+									> False class 'bool'
+								</code></pre>
+              </div>
+              <div>
+                <p>判定結果を代入する</p>
+                <h4 style="margin-top: -10px">
+                  関係演算子についてはこの後詳しく解説します！
+                </h4>
+                <pre><code class='python' data-trim data-noescape="">
+									num_a, num_b = 10 , 20
+
+									bool_3 = num_a > num_b
+									bool_4 = num_a < num_b
+									bool_5 = num_a * 2 == num_b
+
+									print('bool_3 : ', bool_3)
+									print('bool_4 : ', bool_4)
+									print('bool_5 : ', bool_5)
+								</code></pre>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              2.データ型
+            </p>
+            <h1>リスト型・list型</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									list_a = [ 1, 2, 3, "文字", [ "リスト内", "リスト" ]]
+
+									print(list_a, type(list_a))
+									print(len(list_a))
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> [1, 2, 3, '文字', ['リスト内', 'リスト']] class 'list'
+									> 5
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# インデックスで1つ目の要素呼び出してみる
+									print(list_a[0])
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# 2つ目以降の要素呼び出してみる
+									print(list_a[1:])
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# 最後の要素を呼び出してみる
+									print(list_a[-1])
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# リスト要素に再代入してみる
+									list_a[-1][1] = 'リスト2'
+									print(list_a)
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>リスト型は複数の要素を格納できるデータ型</li>
+                  <li>
+                    数値、文字列、またリストそのものを入れておくことができる
+                  </li>
+                  <li>
+                    リストを宣言する場合は角括弧([])で囲みカンマ(,)で要素を区切る
+                  </li>
+                  <li>リストは順番を付けて管理する</li>
+                  <li>順番のことをインデックスと言う</li>
+                  <li>リスト要素を取り出す際には[インデックス]で指定する</li>
+                  <li>リストの要素は再代入出来る</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              2.データ型
+            </p>
+            <h1>タプル型・tuple型</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									tuple_a = ( 1, 2, 3, ("tuple" , "tuple2") )
+
+									print(tuple_a, type(tuple_a))
+									print(len(tuple_a))
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> (1, 2, 3, ('tuple', 'tuple2')) class 'tuple'
+									> 4
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# tuple型は再代入が出来ない
+									tuple_a[3][0] = 'tuple3'
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> TypeError: 'tuple' object does not support item assignment
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>tuple型はリスト型によく似たデータ</li>
+                  <li>
+                    tupleを宣言する場合はまる括弧(
+                    )で囲みカンマ(,)で要素を区切る
+                  </li>
+                  <li>
+                    要素を取り出す際にはリスト型と同様に[インデックス]で指定する
+                  </li>
+                  <li>リスト型と異なり再代入出来ない</li>
+                  <li>実際はあまり使わない(個人的な意見)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              2.データ型
+            </p>
+            <h1>辞書型・dict型</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									dict_a = { 'a' : 1, 'b' : 2, 'c' : 3, 'd' : 'dict', 'list' : [ 4, 5, 6 ]}
+
+									print(dict_a, type(dict_a))
+									print(len(dict_a))
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> {'a': 1, 'b': 2, 'c': 3, 'd': 'dict', 'list': [4, 5, 6]} class 'dict'
+									> 5
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# 要素の取得にはkeyを指定する
+									dict_a['a']
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# valueのリストの要素を取得する
+									dict_a['list'][0]
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# valueの再代入をする
+									dict_a['list'][0] = 7
+
+									print(dict_a)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> {'a': 1, 'b': 2, 'c': 3, 'd': 'dict', 'list': [7, 5, 6]}
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    辞書型（ディクショナリ）もリスト同様、1つの変数で複数の要素を管理できるデータ型
+                  </li>
+                  <li>
+                    リストでは要素をインデックスで管理していましたが、辞書では見出し語となる「キー」で要素を管理する
+                  </li>
+                  <li>辞書ではキーと対応する値(バリュー)をペアで管理する</li>
+                  <li>キーはユニーク(固有)な文字列か数字である必要がある</li>
+                  <li>{ key1 : value1, key2 : value2, ...}</li>
+                  <li>値の再代入も可能</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              2.データ型
+            </p>
+            <h1>集合型・set型</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									set_1 = { "a" , "b" , "c" , "d" }
+									set_2 = { "a" , "b" , "c" , "d" , "a" , "b"}
+
+									print(set_1)
+									print(set_2)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# 和集合
+									print(set_1 | set_2)
+									print(set_1.union(set_2))
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# 積集合
+									set_3 = { "d" , "e" , "f", "g" }
+
+									print(set_1 & set_3)
+									print(set_1.intersection(set_3))
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									# 差集合
+									print(set_1 - set_3)
+									print(set_1.difference(set_3))
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>set型もリストのように複数の要素を管理できるデータ型</li>
+                  <li>要素を追加したり削除したりすることが可能</li>
+                  <li>
+                    和集合、積集合、差集合などの集合演算を行うことが出来る
+                  </li>
+                  <li>
+                    リストとの大きな違いは、重複した要素がないこと+要素に順番がないこと
+                  </li>
+                  <li>初めはあまり使わない(個人的な意見)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              2.データ型
+            </p>
+            <h1>データ型の変換</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									# str型 → int型
+									fuga = '123'
+									print(fuga + '円')
+									fuga = int(fuga)
+									print(fuga + 1)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape="">
+									# int型 → str型
+									hoge = 1000
+									hoge = str(hoge)
+									print(hoge)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape="">
+									# int型 → str型 こんな方法もある
+									hoge = 1000
+									hoge2 = '{:,}'.format(hoge)
+									hoge3 = '{:,}円'.format(hoge)
+									print(hoge2,hoge3)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape="">
+									# int型 → float型
+									piyo = 50
+									piyo = float(piyo)
+									print(piyo)
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    場面のよってデータ型を変更する必要が出てくる事があります
+                  </li>
+                  <li>文字列は計算出来ません</li>
+                  <li>整数や小数は他の文字列と結合出来ません</li>
+                  <li>データ型を確認する + 統一する事を意識しましょう</li>
+                </ul>
+                <p>
+                  もっと詳しく知りたい方はこちら<i
+                    class="fa-solid fa-arrow-down icon"
+                    style="padding-left: 20px"
+                  ></i>
+                </p>
+                <a
+                  href="https://kino-code.com/python_introductory-and-applied05/"
+                  target="”_blank”"
+                  >【Python入門・応用】05.データ型</a
+                >
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- 3. 演算子 -->
+        <section>
+          <section>
+            <p>edaJuke(江田塾) 最低限知っていらば始められるpython基本構文</p>
+            <h1>3. 演算子</h1>
+            <hr />
+            <br />
+            <ul>
+              <li>データ型 : Operator</li>
+              <li>足し算、引き算などの四則演算</li>
+              <li>2つの値の大小を比較するときに使う記号</li>
+            </ul>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 3.
+              演算子
+            </p>
+            <h1>算術演算子</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									x = 10
+									y = 2
+
+									print(x + y)
+									print(x - y)
+									print(x * y)
+									print(x / y)
+									print(x % y)
+									print(x // y)
+								</code></pre>
+                <ul>
+                  <li>算術演算子は基本int型, float型のみ</li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >＋</span
+                    >のみ文字列やリスト等の結合に使用する
+                  </li>
+                </ul>
+                <pre><code class='python' data-trim data-noescape>
+									print('hoge' + 'fuga')
+									print([1,2,3] + [4,5,6])
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >＋</span
+                    >
+                    : 足し算
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >－</span
+                    >
+                    : 引き算
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >＊</span
+                    >
+                    : 掛け算
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >/</span
+                    >
+                    : 割り算
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >％</span
+                    >
+                    : 割り算の余り
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >//</span
+                    >
+                    : 割り算の商
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 3.
+              演算子
+            </p>
+            <h1>関係演算子</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									x = 10
+									y = 2
+									z = 10
+
+									print(x > y)
+									print(x < y)
+									print(x >= y)
+									print(x <= z)
+									print(x == y)
+									print(x != y)
+								</code></pre>
+                <ul>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >==</span
+                    >,
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >!=</span
+                    >は文字列, リスト等でも使用する
+                  </li>
+                </ul>
+                <pre><code class='python' data-trim data-noescape>
+									print('hoge' == 'fuga')
+									print([1,2,3] != [4,5,6])
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >></span
+                    >
+                    : より大きい
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      ><</span
+                    >
+                    : より小さい
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >>=</span
+                    >
+                    : 以上
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      ><=</span
+                    >
+                    : 以下
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >==</span
+                    >
+                    : 等しい
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >!=</span
+                    >
+                    : 等しくない
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 3.
+              演算子
+            </p>
+            <h1>論理演算子</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									x = 8
+									y = 3
+
+									print(x >= 5 and x <= 10)
+									print(y >= 5 and y <= 10)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									x = 8
+									y = 3
+
+									print(x == 3 or y == 3)
+									print(x == 1 or y == 1)
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>論理演算子 : 複数の条件を判断させる演算子</li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >and</span
+                    >
+                    : かつ、
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >or</span
+                    >
+                    : または、
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 3.
+              演算子
+            </p>
+            <h1>代入演算子、複合代入演算子</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									x = 8
+									y = 12
+									z = 20
+
+									x += 10
+									z += y
+
+									print(x)
+									print(z)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									i = 0
+									while i <= 10 :
+												print(i)
+												i += 1
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									i = 10
+									while i >= 0 :
+												print(i)
+												i -= 1
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >＝</span
+                    >
+                    : 代入演算子(変数の宣言や再代入)
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >＋＝</span
+                    >
+                    : 足し算 + 代入(複合代入演算子)
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >―＝</span
+                    >
+                    : 引き算 + 代入(複合代入演算子)
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >＊＝</span
+                    >
+                    : 掛け算 + 代入(複合代入演算子)
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        color: #80bbad;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        padding: 0px 20px;
+                      "
+                      >/＝</span
+                    >
+                    : 割り算 + 代入(複合代入演算子)
+                  </li>
+                  <li>カウントアップやカウントダウンによく使われます！</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 3.
+              演算子
+            </p>
+            <h1>is演算子</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									l1 = [1, 2, 3, 4, 5]
+									l2 = [1, 2, 3, 4, 5]
+									l3 = l1
+
+									print("l1 == l2 :", l1 == l2)
+									print("l1 is l2 :", l1 is l2)
+									print("l1 == l3 :", l1 == l3)
+									print("l1 is l3 :", l1 is l3)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									print("l1_id :", id(l1))
+									print("l2_id :", id(l2))
+									print("l3_id :", id(l3))
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									print(l1, id(l1))
+									l1.append(6)
+									print(l1, id(l1))
+
+									print(l2)
+									print(l3)
+									print(l1 is l3)
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>2つのオブジェクトが同じかどうかを判定する演算子</li>
+                  <li>
+                    Pythonのオブジェクト :
+                    文字列、リスト、辞書、タプル、整数等の型を持つデータのこと
+                  </li>
+                  <li>オブジェクトには固有の番号 idが振られる</li>
+                  <li>id はid関数で確認する事が出来る</li>
+                  <li>
+                    同じidを持つオブジェクトに変更を加えると同じく変更が加わる
+                  </li>
+                  <li>変更を加えたくない場合は.copy()で新しいidを作成する</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 3.
+              演算子
+            </p>
+            <h1>is not演算子</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									l1 = [1, 2, 3, 4, 5]
+									l2 = [1, 2, 3, 4, 5]
+									l3 = l1
+
+									print("    l1 is l2 :", l1 is l2)
+									print("l1 is not l2 :", l1 is not l2)
+									print("    l1 is l3 :", l1 is l3)
+									print("l1 is not l3 :", l1 is not l3)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									str1 = "Apple"
+									str2 = "Apple"
+
+									print(str1 is not str2)
+									print(id(str1))
+									print(id(str2))
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>is not演算子はis演算子の逆です</li>
+                  <li>オブジェクトには2種類ある</li>
+                  <ul>
+                    <li>mutableオブジェクト</li>
+                    <ul>
+                      <li>一度作成したあとで変更することができるもの</li>
+                      <li>リスト、辞書</li>
+                    </ul>
+                    <li>immutableオブジェクト</li>
+                    <ul>
+                      <li>一度作成すると変更できないもの</li>
+                      <li>数値、文字列、タプル</li>
+                    </ul>
+                  </ul>
+                  <li>
+                    immutableオブジェクトは同じ値で作成した場合は同じidが振られる
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 3.
+              演算子
+            </p>
+            <h1>in演算子, not in演算子</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									l = ['Yamada', 'Sato', 'Takahashi']
+
+									print("Yamada in l :", "Yamada" in l)
+									print("Suzuki in l :", "Suzuki" in l)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									print("Yamada not in l :", "Yamada" in l)
+									print("Suzuki not in l :", "Suzuki" in l)
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    in演算子 :
+                    リストやタプルなど、複数の要素を持つオブジェクトの中に、特定の要素が含まれているかどうかを判定する演算子
+                  </li>
+                  <li>not in演算子 : in演算子の逆</li>
+                </ul>
+                <p>
+                  もっと詳しく知りたい方はこちら<i
+                    class="fa-solid fa-arrow-down icon"
+                    style="padding-left: 20px"
+                  ></i>
+                </p>
+                <a
+                  href="https://kino-code.com/python_introductory-and-applied10/"
+                  target="”_blank”"
+                  >【Python入門・応用】10.演算子</a
+                >
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- 4. プログラムの基本構造 -->
+        <section>
+          <p>edaJuke(江田塾) 最低限知っていらば始められるpython基本構文</p>
+          <h1>4. プログラムの基本構造</h1>
+          <hr />
+          <br />
+          <div class="wrapper3">
+            <div>
+              <i class="fa-solid fa-arrow-down-a-z icon"></i>
+              <h2>順次進行</h2>
+            </div>
+            <div>
+              <i class="fa-solid fa-code-branch icon"></i>
+              <h2>条件分岐</h2>
+            </div>
+            <div>
+              <i class="fa-solid fa-rotate-left icon"></i>
+              <h2>繰り返し</h2>
+            </div>
+          </div>
+          <ul style="margin-top: 30px">
+            <li>最も基本的な動きが「順次進行」</li>
+            <li>
+              順次進行 :
+              プログラムのソースコードの記述が、上から順に処理されていく
+            </li>
+            <li>条件分岐・繰り返しについてはこの後解説</li>
+          </ul>
+        </section>
+        <!-- 5. 条件分岐 -->
+        <section>
+          <section>
+            <p>edaJuke(江田塾) 最低限知っていらば始められるpython基本構文</p>
+            <h1>5. 条件分岐</h1>
+            <hr />
+            <br />
+            <ul>
+              <li>
+                「プログラムの基本構造」（「順次進行」, 「条件分岐」,
+                「繰り返し」）の一つ
+              </li>
+              <li>
+                条件に合致する場合は「処理A」、合致しない場合は「処理B」というように、<br />条件に応じて処理を切り替えること
+              </li>
+            </ul>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              5.条件分岐
+            </p>
+            <h1>if文</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									age = 22
+	
+									if age >= 20:
+												print('adult')
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> 'adult'
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									age = 18
+	
+									if age >= 20:
+												print('adult')
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> 
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>ifに続けて「条件」を書きコロン( : )で区切り</li>
+                  <li>1タブ分インデントして「条件を満たした時の処理」を書く</li>
+                  <ul>
+                    <li>
+                      複数の処理を書く際にはインデントが揃っている必要がある
+                    </li>
+                    <li>
+                      多くのコードエディターはコロンを打って改行すると自動でインデントしてくれる
+                    </li>
+                    <li>条件を満たしていない際に何も実行されない</li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              5.条件分岐
+            </p>
+            <h1>if ~ else文</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									age = 18
+
+									if age >= 20:
+												print('adult')
+									else:
+												print('child')
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> 'child'
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									age = 22
+
+									if age >= 20:
+												print('adult')
+									else:
+												print('child')
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> 'adult'
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    if ~
+                    else文は、条件を満たさないときの処理を記述することで実行することが出来る
+                  </li>
+                  <li>elseの後にコロン(:)で区切り改行する</li>
+                  <li>
+                    if文と同様に1タブ分インデントして「条件を満たしていない時の処理」を書く
+                  </li>
+                  <li>
+                    条件を満たしていない時に何も処理しない際にはpassを入れよう!
+                  </li>
+                </ul>
+                <pre><code class='python' data-trim data-noescape>
+									age = 18
+	
+									if age >= 20:
+												print('adult')
+									else:
+												pass
+								</code></pre>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 -
+              5.条件分岐
+            </p>
+            <h1>if ~ elis ~ else文</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									age = 0
+
+									if age >= 20:
+												print('adult')
+									elif age == 0:
+												print('baby')
+									else:
+												print('child')
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> 'baby'
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									number = 24
+
+									if number % 2 == 0 and number % 3 == 0:
+												print("6の倍数です")
+									elif number % 2 == 0 and number % 3 != 0:
+												print("2の倍数です")
+									elif number % 2 != 0 and number % 3 == 0:
+												print("3の倍数です")
+									else:
+												print("2と3の倍数ではありません")
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>elifは条件をさらに加えたい場合使う</li>
+                  <li>ifとelseの間に必ず記述する</li>
+                  <li>コロンやインデントの使い方はif, elseと同様</li>
+                  <li>
+                    算術演算子や論理演算子を組み合わせて複数の条件設定が可能
+                  </li>
+                </ul>
+                <p>
+                  もっと詳しく知りたい方はこちら<i
+                    class="fa-solid fa-arrow-down icon"
+                    style="padding-left: 20px"
+                  ></i>
+                </p>
+                <a
+                  href="https://kino-code.com/python_introductory-and-applied11/"
+                  target="”_blank”"
+                  >【Python入門・応用】11.条件分岐</a
+                >
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- 6. 繰り返し -->
+        <section>
+          <section>
+            <p>edaJuke(江田塾) 最低限知っていらば始められるpython基本構文</p>
+            <h1>6. 繰り返し</h1>
+            <hr />
+            <br />
+            <ul>
+              <li>
+                「プログラムの基本構造」（「順次進行」, 「条件分岐」,
+                「繰り返し」）の一つ
+              </li>
+              <li>
+                繰り返し :
+                決まった回数や条件を満たしていれば、同じ処理を実行するプログラム構造
+              </li>
+              <li>繰り返し : 反復処理, ループ処理とも言う</li>
+              <li>大きく分けて2種類 : 「for文」と「if文」</li>
+            </ul>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 6.
+              繰り返し
+            </p>
+            <h1>for文</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									for i in [0,1,2,3,4]:
+												print(i)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> 0
+									> 1
+									> 2
+									> 3
+									> 4
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									fruits = ['apple','orange','banana']
+									for fruit in fruits:
+												print(fruit)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> 'apple'
+									> 'orange'
+									> 'banana'
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    for文 : 条件を満たしていれば同じ処理を繰り返し,<br />条件を満たさなくなったタイミングで繰り返しが終了する
+                  </li>
+                  <li>
+                    for 変数 in 複数の要素を持つオブジェクト:と記述
+                    改行+インデントで繰り返したい処理を記述する
+                  </li>
+                  <ul>
+                    <li>複数の要素を持つオブジェクト : リスト, タプル等</li>
+                    <li>変数のベストプラクティス :</li>
+                    <ul>
+                      <li>数字 : i(integer, indexなど意味)</li>
+                      <li>
+                        文字列 : 複数の要素を持つオブジェクトを複数形,
+                        変数を単数形で記述する
+                      </li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 6.
+              繰り返し
+            </p>
+            <h1>break文</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									fruits = ['apple','orange','banana']
+									for fruit in fruits:
+												print(fruit)
+												break
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> 'apple'
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									for i in range(5):
+												if i == 3:
+															break
+												print(i)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> 0
+									> 1
+									> 2
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>break文 : 繰り返し処理を終了させる</li>
+                  <li>条件を指定しない場合は1つ目の処理が実行されて終了する</li>
+                  <li>条件を指定した場合はその条件を満たすと処理が終了する</li>
+                  <li>開発時にコードの確認の為利用する事も多い！</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 6.
+              繰り返し
+            </p>
+            <h1>continue文</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									for i in range(5):
+												if i == 3:
+															continue
+												print(i)
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> 0
+									> 1
+									> 2
+									> 4
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    continue文 :
+                    ある条件にあてはまったとき、その処理をスキップさせる
+                  </li>
+                  <li>想定内の例外処理などで使われる</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 6.
+              繰り返し
+            </p>
+            <h1>while文</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code class='python' data-trim data-noescape>
+									i = 0
+									while i < 5:
+												print(i)
+												i += 1
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									> 0
+									> 1
+									> 2
+									> 3
+									> 4
+								</code></pre>
+                <pre><code class='python' data-trim data-noescape>
+									i = 0
+									while i < 5:
+												print(i)
+												i += 1
+												if i == 3:
+															break
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    while文 :
+                    処理を繰り返す条件を書き、条件を満たしている間処理を繰り返す
+                  </li>
+                  <li>条件を満たさなくなったら処理は終了する</li>
+                  <li>breakやcontinueなどの処理はwhile文でも使用可能</li>
+                  <li>
+                    無限ループに注意！break文を活用して試してから実行使用！
+                  </li>
+                </ul>
+                <p>
+                  もっと詳しく知りたい方はこちら<i
+                    class="fa-solid fa-arrow-down icon"
+                    style="padding-left: 20px"
+                  ></i>
+                </p>
+                <a
+                  href="https://kino-code.com/introductory-and-applied12/"
+                  target="”_blank”"
+                  >【Python入門・応用】12.繰り返し</a
+                >
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- 7. 関数 -->
+        <section>
+          <section>
+            <p>edaJuke(江田塾) 最低限知っていらば始められるpython基本構文</p>
+            <h1>7. 関数</h1>
+            <hr />
+            <br />
+            <ul>
+              <li>関数 : いろいろな「処理」をまとめて1つにしたもの</li>
+              <li>利点 :</li>
+              <ul>
+                <li>何度も同じコードを書かなくても良くなる</li>
+                <li>コードの行数を抑える事が出来る</li>
+                <li>処理を共有出来る</li>
+              </ul>
+              <li>プログラミングの醍醐味！</li>
+            </ul>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 7.
+              関数
+            </p>
+            <h1>2種類の関数</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <i class="fa-solid fa-gear icon"></i>
+                <h2 style="margin-top: 20px">組み込み関数</h2>
+                <ul>
+                  <li>print関数などPythonが予め定義されている関数</li>
+                  <li>ライブラリーなどが定義している関数</li>
+                </ul>
+                <pre><code type="python" data-trim="" data-noescape="">
+									print('Hello World!!')
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> "Hello World!!"
+								</code></pre>
+              </div>
+              <div>
+                <i class="fa-solid fa-user icon"></i>
+                <h2 style="margin-top: 20px">自分で作る関数</h2>
+                <ul>
+                  <li>def 関数名(): で定義する</li>
+                  <li>関数名() で実行</li>
+                </ul>
+                <pre><code type="python" data-trim="" data-noescape="">
+									def say_hello():
+												print('Hello World!!')
+									
+									say_hello()
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> "Hello World!!"
+								</code></pre>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 7.
+              関数
+            </p>
+            <h1>引数なし , 引数あり</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code type="python" data-trim="" data-noescape="">
+									def say_hello():
+												print('Hello World!!')
+
+									say_hello()
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 'Hello World!!'
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									def say_hello(greeting):
+												print(greeting)
+
+									say_hello('Hello World!!')
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 'Hello World!!'
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									say_hello('Hello World!!!!!!!!!!!!')
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 'Hello World!!!!!!!!!!!!'
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>関数の引数は関数名の後の()「丸括弧」の中に書く</li>
+                  <li>引数が無い場合は()空で定義する</li>
+                  <li>:コロンを書いて改行+インデントで処理を書く</li>
+                  <li>関数を実行する際は関数名+(引数)で実行</li>
+                  <li>
+                    引数を定義すると同じ処理を引数の部分を変えて実行する事が出来る
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 7.
+              関数
+            </p>
+            <h1>複数の引数</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code type="python" data-trim="" data-noescape="">
+									def tax_cost(cost , tax_rate, currency):
+												tax_cost = int(cost * tax_rate)
+												print('{:,}'.format(tax_cost)+currency)
+
+									tax_cost(1000 , 1.1 , '円')
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 1,100円
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									costs = [1000, 1500, 2000, 5000]
+
+									for cost in costs:
+												tax_cost(cost , 1.1 , '円')
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 1,100円
+									> 1,650円
+									> 2,200円
+									> 5,500円
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>関数の引数は複数設定が可能</li>
+                  <li>int型, str型などを組み合わせる事も可能</li>
+                  <li>
+                    for文等で繰り返し処理を行う事によりダイナミックな処理を書く事が出来る
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 7.
+              関数
+            </p>
+            <h1>デフォルト引数, 戻り値</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code type="python" data-trim="" data-noescape="">
+									def tax_calc(cost , tax_rate=1.1, currency='円'):
+												tax_cost = '{:,}'.format(int(cost * tax_rate))+currency
+												print(tax_cost)
+
+									tax_calc(1000)
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 1,100円
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									def tax_calc(cost , tax_rate=1.1, currency='円'):
+												tax_cost = '{:,}'.format(int(cost * tax_rate))+currency
+												return tax_cost
+
+									tax_costs = []
+									for cost in costs:
+												tax_costs.append(tax_calc(cost))
+
+									print(tax_costs)
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> ['1,100円', '1,650円', '2,200円', '5,500円']
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>引数にはデフォルトで値を設定する事が出来る</li>
+                  <li>
+                    引数にあらかじめ値を渡しておくことでその引数を省略する事が可能
+                  </li>
+                  <li>注意点！</li>
+                  <ol>
+                    <li>デフォルト値を与えない引数は先に書く</li>
+                    <li>引数の順番を守る</li>
+                  </ol>
+                  <li>戻り値を設定する事で値を取得する事が可能</li>
+                  <li>関数の処理の終わりにreturn文で戻す値を指定する</li>
+                  <li>リストなどへの値の格納が可能になる</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 7.
+              関数
+            </p>
+            <h1>キーワード引数</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code type="python" data-trim="" data-noescape="">
+									def tax_calc(cost , tax_rate=1.1, currency='円'):
+												tax_cost = '{:,}'.format(int(cost * tax_rate))+currency
+												print(tax_cost)
+
+									tax_calc(1000)
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 1,100円
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									tax_calc(1.1, '円', 2000) # これはエラーになります！
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> TypeError: can't multiply sequence by non-int of type 'float'
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									tax_calc(tax_rate=1.1, currency='円', cost=2000)
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 2,200円
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    関数の引数が複数ある場合、通常
+                    関数を呼び出すときの引数は1番目が第1引数、
+                    2番目が第2引数、3番目が第3引数と、順番に渡されます
+                    (位置引数)
+                  </li>
+                  <li>
+                    一方、順番ではなく名前で値を渡す引数を指定する方法もあり,
+                    これを「キーワード引数」という
+                  </li>
+                </ul>
+                <p>
+                  もっと詳しく知りたい方はこちら<i
+                    class="fa-solid fa-arrow-down icon"
+                    style="padding-left: 20px"
+                  ></i>
+                </p>
+                <a
+                  href="https://kino-code.com/introductory-and-applied16/"
+                  target="”_blank”"
+                  >【Python入門・応用講座】16.関数</a
+                >
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- 8. 文字列の操作メゾット -->
+        <section>
+          <section>
+            <p>edaJuke(江田塾) 最低限知っていらば始められるpython基本構文</p>
+            <h1>8. 文字列の操作メゾット</h1>
+            <hr />
+            <br />
+            <ul>
+              <li>データの前処理や加工の必須スキル</li>
+              <li>文字列を操作してデータ分析が可能なデータを作ろう！</li>
+              <li>特に多様するメゾットをご紹介！</li>
+            </ul>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 8.
+              文字列の操作
+            </p>
+            <h1>split</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code type="python" data-trim="" data-noescape="">
+									print("Hoge,Fuga,Hogera,Piyo".split(','))
+									text = "Hoge,Fuga,Hogera,Piyo"
+									print(text.split(','))
+									texts=text.split(',')
+									print(texts)
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> ['Hoge', 'Fuga', 'Hogera', 'Piyo']
+									> ['Hoge', 'Fuga', 'Hogera', 'Piyo']
+									> ['Hoge', 'Fuga', 'Hogera', 'Piyo']
+								</code></pre>
+
+                <pre><code type="python" data-trim="" data-noescape="">
+									csvFile = 'Master_Data_20201224.csv'
+									print(csvFile.split('_'))
+									print(csvFile.split('_')[-1])
+									print(csvFile.split('_')[-1].split('.')[0])
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> ['Master', 'Data', '20201224.csv']
+									> 20201224.csv
+									> 20201224
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>テキストを区切り文字で分割するメゾット</li>
+                  <li>Pythonの組み込み関数のsplit関数</li>
+                  <li>指定した区切り文字で文字列を分割し、リストに格納</li>
+                  <li>
+                    書き方 : 文字列.split(区切り文字) → リストが返ってくる
+                  </li>
+                  <li>区切り文字の引数が空の場合は空欄で分割される</li>
+                </ul>
+                <pre><code type="python" data-trim="" data-noescape="">
+									text = "Hoge Fuga Hogera Piyo"
+									print(text.split())
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> ['Hoge', 'Fuga', 'Hogera', 'Piyo']
+								</code></pre>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 8.
+              文字列の操作
+            </p>
+            <h1>replace</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code type="python" data-trim="" data-noescape="">
+									phrase = "Hello World! Welcome to Python!"
+									print(phrase)
+									print(phrase.replace('Python' , 'JavaScript'))
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> Hello World! Welcome to Python!
+									> Hello World! Welcome to JavaScript!
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									str_cost = '100万円'
+									int_cost = int(str_cost.replace('万円','')) * 10000
+									print(str_cost , '税込み→' , int(int_cost * 1.1))
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 100万円 税込み→ 1100000
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>文字列を置換するメゾット</li>
+                  <li>Pythonの組み込み関数のreplace関数</li>
+                  <li>指定した文字列の部分を指定した文字列へ置換する</li>
+                  <li>
+                    書き方 : 文字列.split(置き換えたい文字列,
+                    置き換え後の文字列)
+                  </li>
+                  <li>
+                    第二引数に空文字("")を指定すると第一引数の文字列が消える
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 8.
+              文字列の操作
+            </p>
+            <h1>format</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code type="python" data-trim="" data-noescape="">
+									year = 2024
+
+									print('今年は{}年です。'.format(year))
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 今年は2024年です。
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									month = 4
+									date = 11
+
+									print('今日は{}年{}月{}日です。'.format(year, month, date))
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 今日は2024年4月11日です。
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									print(f'今日は{year}年{month}月{date}日です。')
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 今日は2024年4月11日です。
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>文字列の途中の波括弧({})へ埋め込むメゾット</li>
+                  <li>Pythonの組み込み関数のformat関数</li>
+                  <li>書き方 : 文字列{}.format(埋め込みたい文字列)</li>
+                  <li>複数の埋め込みを行う事も可能</li>
+                  <li>
+                    複数埋め込む場合は波括弧({})の数と引数の数が同じである必要がある
+                  </li>
+                  <li>
+                    format関数を省略する事も出来るf""文字列の先頭にfを書き,
+                    波括弧の中に埋め込みたい文字列を書く
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 8.
+              文字列の操作
+            </p>
+            <h1>便利なformat</h1>
+            <hr />
+            <br />
+            <div class="wrapper3">
+              <div>
+                <p>桁区切りを追加</p>
+                <h3>"{:,}".format(num)</h3>
+                <pre><code type="python" data-trim="" data-noescape="">
+									num = 111222333
+									print("{:,}".format(num))
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 111,222,333
+								</code></pre>
+              </div>
+              <div>
+                <p>小数点以下の桁を指定</p>
+                <h3>"{:.2f}".format(num)</h3>
+                <pre><code type="python" data-trim="" data-noescape="">
+									num = 1234.5678
+									print("{:.2f}".format(num))
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 1234.57
+								</code></pre>
+                <h4>桁数はfの前の数字を変えるだけで変更可能</h4>
+              </div>
+              <div>
+                <p>パーセントを表示</p>
+                <h3>"{:.2%}".format(num)</h3>
+                <pre><code type="python" data-trim="" data-noescape="">
+									num = 0.25363
+									print("{:.2%}".format(num))
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> 25.36%
+								</code></pre>
+                <h4>桁数はfの前の数字を変えるだけで変更可能</h4>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 8.
+              文字列の操作
+            </p>
+            <h1>join</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code type="python" data-trim="" data-noescape="">
+									texts = ['Hello', 'World', '!!!!']
+
+									print(' '.join(texts))
+									print('---'.join(texts))
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> Hello World !!!!
+									> Hello---World---!!!!
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									langs = ['Python', 'HTML', 'CSS', 'JavaScript']
+
+									print('I study ' + ' & '.join(langs))
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> I study Python & HTML & CSS & JavaScript
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>文字列を結合するメゾット</li>
+                  <li>Pythonの組み込み関数のjoin関数</li>
+                  <li>
+                    結合の際に区切り文字としたい文字列をクオーテーションで囲み、.joinの引数に変数を指定
+                  </li>
+                  <li>書き方 : "区切り文字".join(統合したい文字列の配列)</li>
+                </ul>
+                <p>
+                  もっと詳しく知りたい方はこちら<i
+                    class="fa-solid fa-arrow-down icon"
+                    style="padding-left: 20px"
+                  ></i>
+                </p>
+                <a
+                  href="https://kino-code.com/python-mojisousa-matome/"
+                  target="”_blank”"
+                  >【毎日Python】文字操作メソッド一覧</a
+                >
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- 9. リスト内包表記(おまけ) -->
+        <section>
+          <section>
+            <p>edaJuke(江田塾) 最低限知っていらば始められるpython基本構文</p>
+            <h1>9. リスト内包表記(おまけ)</h1>
+            <hr />
+            <br />
+            <ul>
+              <li>
+                よく用いられる if 文・for 文を一行で記載できる画期的な記述方法
+              </li>
+              <li>
+                内包表記は繰り返し処理や条件分岐の結果をリストに格納したいときに絶大な力を発揮
+              </li>
+              <li>慣れないうちは非常に難しく感じる書き方</li>
+              <li>でも書けるとかっこいいコードが書ける！</li>
+              <li>
+                サンプルコードなどでも多様されている為読み方は覚えておこう！
+              </li>
+            </ul>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 9.
+              リスト内包表記
+            </p>
+            <h1>for文の内包表記</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code type="python" data-trim="" data-noescape="">
+									# for文
+									double = []
+									for i in range(5):
+												double.append(i*2)
+									print(double)
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> [0, 2, 4, 6, 8]
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									# リスト内包表記
+									double = [i*2 for i in range(5)]
+									print(double)
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> [0, 2, 4, 6, 8]
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    リスト内包表記の for 文は処理したい式を先頭に書いて、[]
+                    で囲うだけ！
+                  </li>
+                  <li>
+                    書き方 : <br />[処理 for 変数名 in イテラブルオブジェクト]
+                  </li>
+                  <li>
+                    イテラブルオブジェクト :
+                    リスト、辞書、タプルなどの反復可能なオブジェクト
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 9.
+              リスト内包表記
+            </p>
+            <h1>if文の内包表記</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code type="python" data-trim="" data-noescape="">
+									# if文
+									fileList = ['img.png', 'data1.csv', 'memo.txt', 
+												'masterData.csv', 'spreadsheet.xlsx', 'data2.csv']
+
+									csvList = []
+									for file in fileList:
+									if file.endswith('.csv'):
+													csvList.append(file)
+									print(csvList)
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> ['data1.csv', 'masterData.csv', 'data2.csv']
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									# リスト内包表記
+									csvList = [c for c in fileList if c.endswith('.csv')]
+									print(csvList)
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> ['data1.csv', 'masterData.csv', 'data2.csv']
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    リスト内包表記の if 文は、for 文の内包表記に加えて、if
+                    条件式を末尾に書くだけ
+                  </li>
+                  <li>
+                    書き方 : <br />[処理 for 変数名 in イテラブルオブジェクト if
+                    条件式]
+                  </li>
+                  <li>
+                    処理を行わずそのまま取り出す場合は変数名をそのまま先頭に書く
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-background-color="#4b7578">
+            <p>
+              edaJuke(江田塾) 最低限知っていらば始められるpython基本構文 - 9.
+              リスト内包表記
+            </p>
+            <h1>if/else文の内包表記</h1>
+            <hr />
+            <br />
+            <div class="wrapper2">
+              <div>
+                <pre><code type="python" data-trim="" data-noescape="">
+									# if/else文
+									# 奇数なら10をかける
+									odd10 = []
+									for i in range(10):
+										if i % 2 == 1:
+											odd10.append(i*10)
+										else:
+											odd10.append(i)
+									print(odd10)
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> [0, 10, 2, 30, 4, 50, 6, 70, 8, 90]
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									# リスト内包表記
+									odd10 = [i * 10 if i % 2 ==1 else i for i in range(10)]
+									print(odd10)
+								</code></pre>
+                <pre><code type="python" data-trim="" data-noescape="">
+									> [0, 10, 2, 30, 4, 50, 6, 70, 8, 90]
+								</code></pre>
+              </div>
+              <div>
+                <ul>
+                  <li>if/else を含むと少しトリッキー！</li>
+                  <li>
+                    書き方 : <br />[条件式が True のときの処理 if 条件式 else
+                    条件式が False のときの処理 for 変数名 in
+                    イテラブルオブジェクト]
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/menu/menu.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        width: 1200,
+        height: 675,
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealNotes,
+          RevealSearch,
+          RevealMenu,
+        ],
+      });
+    </script>
+  </body>
+</html>
